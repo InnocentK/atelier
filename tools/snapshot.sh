@@ -38,7 +38,9 @@ for entry in */; do
     [ -d "$vault" ] || continue
 
     notes=$(find "$vault" -type f -name '*.md' ! -path '*/.*' | wc -l | tr -d ' ')
-    prev=$(find "$BACKUP/$vault" -type f -name '*.md' ! -path '*/.*' 2>/dev/null | wc -l | tr -d ' ')
+    # Count from inside the backup copy: the backup folder's own name starts
+    # with a dot, so a path filter applied from outside would exclude everything.
+    prev=$( (cd "$BACKUP/$vault" 2>/dev/null && find . -type f -name '*.md' ! -path './.*') | wc -l | tr -d ' ')
 
     # A sync stall or a mass deletion must not quietly become the newest
     # restore point. Refuse, and let the failure be visible instead.
