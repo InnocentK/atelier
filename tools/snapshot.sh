@@ -23,6 +23,7 @@ die() { printf '%s  SNAPSHOT FAILED: %s\n' "$(ts)" "$*" >&2; exit 1; }
 cd "$ROOT"
 
 [ -d "$BACKUP/.git" ] || {
+    mkdir -p "$BACKUP"
     git -C "$BACKUP" init -q
     git -C "$BACKUP" config user.name  "vault-snapshot"
     git -C "$BACKUP" config user.email "vault-snapshot@localhost"
