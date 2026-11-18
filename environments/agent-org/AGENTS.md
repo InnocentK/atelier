@@ -79,7 +79,7 @@ See the broker schemas in the governance package. The in-vault copy of policy is
 7. Atomic write or move (`os.replace` of a same-directory temp file).
 8. Read back path, bytes, frontmatter, and hash.
 9. Append a non-secret receipt under `Transactions/Receipts/`.
-10. Verify official Sync status only after Sync is enabled; during the pilot, require human mobile confirmation before claiming Sync success.
+10. Verify official Sync status only after Sync is enabled; require a human confirmation on a second device before claiming Sync success.
 11. If anything drifted, stop and return to Curator.
 
 ## Human edits and Sync conflicts
@@ -99,14 +99,14 @@ Humans may edit from desktop or mobile. That is valid concurrent input.
 
 ## Authentication
 
-Obsidian account, encryption password, and 2FA are human-controlled through the official masked/native UI. Never type, solicit, capture, or repeat them. Do not use Headless Sync in this pilot.
+Obsidian account, encryption password, and 2FA are human-controlled through the official masked/native UI. Never type, solicit, capture, or repeat them. Do not use Headless Sync for this vault.
 
 ## Health check
 
 Any agent may verify, using file tools:
 
 1. Frontmatter YAML parses; `type` is legal; `Trash/` excluded from uniqueness if needed for husks.
-2. [[Event Intake Gate]] is `disabled` until the pilot matrix passes.
+2. [[Event Intake Gate]] is `disabled` until the acceptance tests pass.
 3. No unexpected top-level folders.
 4. No writes under `.obsidian/` by agents.
 5. Every published artifact has provenance fields in [[Artifact Schema]].

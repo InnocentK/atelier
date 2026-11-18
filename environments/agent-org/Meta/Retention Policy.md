@@ -1,16 +1,16 @@
 ---
 type: schema
 created: 2026-09-16
-pilot_days: 90
+review_days: 90
 automatic_purge: false
-pilot_start: null
+review_start: null
 ---
 
 # Retention Policy
 
-Pilot length: **90 days** from the Operator-recorded scaffold timestamp (`pilot_start`, written into this note's frontmatter on first successful scaffold, not before).
+Retention is reviewed **90 days** after the Operator-recorded scaffold timestamp (`review_start`, written into this note's frontmatter on first successful scaffold, not before).
 
-During the pilot:
+Until that review:
 
 - There is **no automatic age-based purge**.
 - Curator may authorize **non-destructive archive** when an artifact is superseded, no longer operationally active, or retained primarily as history. Record reason, replacement, source-owner notification, and date.
@@ -28,4 +28,4 @@ See Templates/trash-recommendation.md. Trash-stage without both concurrences is 
 
 ## Rollback vs deletion
 
-Rollback of a failed create **moves** the new file to `Quarantine/rollback-<transaction_id>/`. It does not unlink. Quarantine is retained for the pilot.
+Rollback of a failed create **moves** the new file to `Quarantine/rollback-<transaction_id>/`. It does not unlink. Quarantine is retained until the retention review.

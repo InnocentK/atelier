@@ -84,7 +84,7 @@ Agent runtimes and the human's Obsidian app may run as the same operating-system
 
 Keep the vault close to default core behavior:
 
-- Core plugins only for the pilot. Sync is required. Community plugins are out of scope.
+- Core plugins only. Sync is required. Community plugins are out of scope.
 - Settings → Templates → Template folder location: `Templates`.
 - Settings → Sync → Conflict resolution: **Create conflict file** on every device.
 - Agents never edit `.obsidian/`.
