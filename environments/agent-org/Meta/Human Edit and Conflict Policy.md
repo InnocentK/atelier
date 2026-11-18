@@ -35,7 +35,7 @@ If the human edited a region the transaction does not touch:
 
 Vendor docs (Obsidian 1.9.7+): conflict resolution is device-specific. **Automatically merge** uses diff-match-patch on Markdown and can combine edits without a visible extra file. This vault requires **Create conflict file** so conflicts cannot be silently lost.
 
-If a device is found on auto-merge, treat that as a pilot failure for conflict tests until the human sets Create conflict file on that device.
+If a device is found on auto-merge, treat conflict handling as untested until the human sets Create conflict file on that device.
 
 ## Same-UID / non-Sync mystery edits
 

@@ -49,4 +49,4 @@ No passwords, tokens, private keys, account numbers, recovery material, verifica
 
 ## Redaction in curated copies
 
-If a source is otherwise eligible but contains a secret substring, **do not ingest**. Return to the source owner for a redacted revision. Curator does not silently strip secrets and publish the rest in the pilot (too easy to miss a second secret). Exception: Security Auditor reports that already state values were not recorded and contain only redaction markers may be ingested as `restricted` after a fresh scan passes.
+If a source is otherwise eligible but contains a secret substring, **do not ingest**. Return to the source owner for a redacted revision. Curator does not silently strip secrets and publish the rest (too easy to miss a second secret). Exception: Security Auditor reports that already state values were not recorded and contain only redaction markers may be ingested as `restricted` after a fresh scan passes.

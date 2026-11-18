@@ -11,7 +11,7 @@ Provider: **Obsidian Sync** only. No third-party folder sync (iCloud/Dropbox/Dri
 
 Human-only through official Obsidian UI. See the governance package `handoff/obsidian-human-auth.md`. Agents never receive passwords, encryption passwords, recovery material, or 2FA codes.
 
-Do not use Obsidian Headless in this pilot.
+Do not use Obsidian Headless for this vault.
 
 ## Device settings (human, official UI)
 
@@ -31,7 +31,7 @@ Local file existence is **not** Sync success.
 After Sync is enrolled:
 
 - Operator may use official UI status (green check, Sync log "Fully Synced") and, if the human enabled official CLI, `obsidian sync:status` against the **running** app.
-- During the pilot, a human mobile confirmation is required before claiming Sync success.
+- A human confirmation on a second device is required before claiming Sync success.
 
 ## Version history and restore
 

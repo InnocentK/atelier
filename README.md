@@ -84,7 +84,8 @@ governance package. Those are yours to supply.
 
 - Most of this is written instruction. What is enforced in code is small: the
   log checker and the snapshot guards.
-- The `agent-org` environment has been run as a pilot only.
+- The `personal-ops` environment has been in daily use since August 2026. The
+  `agent-org` environment is newer and has seen far less use.
 - The manuals assume Obsidian Sync with conflict files enabled. Other sync
   methods will need the conflict rules adjusted.
 - Agents and the owner usually run as the same operating-system user, so an

@@ -8,7 +8,7 @@ status: disabled
 
 `status: disabled`
 
-Event-driven publication from task board completion, cron, filesystem watchers, or gateway events is **off** until the manual pilot acceptance matrix passes.
+Event-driven publication from task board completion, cron, filesystem watchers, or gateway events is **off** until the manual acceptance tests pass.
 
 While disabled:
 
