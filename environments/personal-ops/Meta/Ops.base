@@ -1,0 +1,77 @@
+filters:
+  and:
+    - not:
+        - file.inFolder("Archive")
+        - file.inFolder("Meta")
+        - file.inFolder("Trash")
+views:
+  - type: table
+    name: Open tasks
+    filters:
+      and:
+        - type == "task"
+        - or:
+            - status == "open"
+            - status == "waiting"
+    order:
+      - file.name
+      - status
+      - priority
+      - due
+      - area
+      - tags
+  - type: table
+    name: Active reminders
+    filters:
+      and:
+        - type == "reminder"
+        - status == "active"
+    order:
+      - file.name
+      - remind
+      - repeat
+      - area
+  - type: table
+    name: Upcoming events
+    filters:
+      and:
+        - type == "event"
+        - date >= today()
+    order:
+      - file.name
+      - date
+      - start
+      - end
+      - end_date
+      - location
+      - attendees
+  - type: table
+    name: Inbox
+    filters:
+      and:
+        - type == "inbox"
+    order:
+      - file.name
+      - captured
+  - type: table
+    name: Open ideas
+    filters:
+      and:
+        - type == "idea"
+        - status == "open"
+    order:
+      - file.name
+      - proposed_by
+      - revisit
+      - created
+  - type: table
+    name: Contacts
+    filters:
+      and:
+        - type == "contact"
+    order:
+      - file.name
+      - relation
+      - birthday
+      - anniversary
+      - area

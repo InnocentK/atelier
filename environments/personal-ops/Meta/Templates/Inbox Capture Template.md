@@ -1,0 +1,4 @@
+---
+type: inbox
+captured: {{date}}
+---
